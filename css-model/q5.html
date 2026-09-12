@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Selectors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced Selectors</h1>
+    <p>Attribute selectors, pseudo-classes, pseudo-elements, and combinators, all in one page.</p>
+  </header>
+
+  <main>
+
+    <section id="attribute-demo">
+      <h2>Attribute Selectors</h2>
+      <input type="text" placeholder="Styled by [type='text']">
+      <br>
+      <a href="https://example.com">Secure link (styled by [href^='https'])</a>
+    </section>
+
+    <section id="pseudo-class-demo">
+      <h2>Pseudo-Classes</h2>
+      <ul class="item-list">
+        <li><a href="#" class="list-link">Hover, focus, and nth-child link one</a></li>
+        <li><a href="#" class="list-link">Item two</a></li>
+        <li><a href="#" class="list-link">Item three</a></li>
+        <li><a href="#" class="list-link">Item four</a></li>
+      </ul>
+    </section>
+
+    <section id="pseudo-element-demo">
+      <h2>Pseudo-Elements</h2>
+      <p class="quote">This paragraph has generated content before and after it, added purely with CSS.</p>
+    </section>
+
+    <section id="combinator-demo">
+      <h2>Combinators</h2>
+      <div class="panel">
+        <p>Direct child paragraph of .panel, selected with the child combinator.</p>
+        <div class="nested">
+          <p>Descendant paragraph, nested deeper, selected with the descendant combinator.</p>
+        </div>
+      </div>
+      <h3>Adjacent heading</h3>
+      <p>Immediately after the heading &mdash; styled by the adjacent sibling combinator.</p>
+      <p>A later paragraph &mdash; styled by the general sibling combinator.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Assignment 7 &mdash; Question 5</p>
+  </footer>
+</body>
+</html>

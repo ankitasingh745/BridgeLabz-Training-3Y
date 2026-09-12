@@ -1,0 +1,67 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #23272b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* ===== Center all boxes vertically and horizontally ===== */
+.size-stage {
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.size-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+/* ===== Box 1: fixed pixel sizing ===== */
+.box-px {
+  width: 150px;
+  height: 150px;
+  background-color: #2563eb;
+}
+
+/* ===== Box 2: percentage width, relative to its flex container ===== */
+.box-percent {
+  width: 40%;
+  min-height: 120px;
+  background-color: #16a34a;
+}
+
+/* ===== Box 3: viewport height and em-based max-width, with overflow control ===== */
+.box-vh-em {
+  height: 30vh;
+  max-width: 12em;
+  overflow: auto;
+  background-color: #d97706;
+  display: block;
+  padding: 1rem;
+}

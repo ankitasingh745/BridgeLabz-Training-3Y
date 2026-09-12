@@ -1,0 +1,82 @@
+/* ===== Base page styling ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #23272b;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* ===== Center the whole box-model diagram ===== */
+.model-stage {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.layer {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.layer-label {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  font-size: 0.7rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Outermost layer: margin, shown with an outline since margin itself is transparent ===== */
+.margin-layer {
+  outline: 2px dashed #f59e0b;
+  padding: 30px; /* visually represents the margin space */
+  background-color: #fff7ed;
+}
+
+/* ===== Border layer ===== */
+.border-layer {
+  border: 8px solid #2563eb;
+  background-color: #eff6ff;
+  padding-top: 1.25rem;
+}
+
+/* ===== Padding layer ===== */
+.padding-layer {
+  background-color: #dcfce7;
+  padding: 30px;
+  padding-top: 1.25rem;
+}
+
+/* ===== Innermost layer: actual content ===== */
+.content-layer {
+  background-color: #16a34a;
+  color: #ffffff;
+  width: 140px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.comparison-note {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}

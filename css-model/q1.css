@@ -1,0 +1,87 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f7f8fa;
+  color: #23272b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header {
+  background-color: #22303f;
+  color: #ffffff;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 2.5rem 1rem;
+}
+
+/* ===== Flexbox row aligning all boxes horizontally ===== */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.demo-box {
+  width: 200px;
+  text-align: center;
+  background-color: #ffffff;
+  border-width: 4px;
+  border-color: #9ca3af;
+  /* Smooth transition when the border color changes on hover */
+  transition: border-color 0.3s ease;
+}
+
+.demo-box h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.demo-box p {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== Different border styles, each with its own padding value ===== */
+.solid-border {
+  border-style: solid;
+  padding: 10px;
+}
+
+.dashed-border {
+  border-style: dashed;
+  padding: 20px;
+}
+
+.double-border {
+  border-style: double;
+  border-width: 6px;
+  padding: 15px;
+}
+
+/* Groove border also demonstrates rounded corners */
+.groove-border {
+  border-style: groove;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* ===== Hover effect: border color change with smooth transition ===== */
+.demo-box:hover {
+  border-color: #2563eb;
+}

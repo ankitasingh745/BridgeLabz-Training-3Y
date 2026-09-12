@@ -1,0 +1,86 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fffdf9;
+  color: #2b2b2b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.article {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ===== Base paragraph typography: serif, roomy line-height and spacing ===== */
+.article p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ===== Custom colors for inline emphasis elements ===== */
+mark {
+  background-color: #fde68a;
+  color: #78350f;
+  padding: 0 0.2rem;
+}
+
+strong {
+  color: #1d4ed8;
+}
+
+em {
+  color: #b45309;
+}
+
+/* ===== Sans-serif paragraph for contrast ===== */
+.sans-paragraph {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+/* ===== ::first-letter and ::first-line pseudo-elements ===== */
+.first-letter-demo::first-letter {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #b45309;
+  float: left;
+  line-height: 1;
+  margin-right: 0.4rem;
+}
+
+.first-letter-demo::first-line {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

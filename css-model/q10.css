@@ -1,0 +1,67 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #23272b;
+}
+
+main {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* ===== Horizontal navbar built with Flexbox ===== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #111827;
+}
+
+.nav-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* ===== Active link highlighted with an underline ===== */
+.nav-link.active {
+  border-bottom-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===== Responsive: stack links vertically below 700px ===== */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    text-align: center;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .nav-link.active {
+    border-bottom: 1px solid #2563eb;
+  }
+}
