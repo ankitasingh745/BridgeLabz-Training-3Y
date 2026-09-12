@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Content-Box vs Border-Box</h1>
+    <p>Both boxes below are set to width: 250px and padding: 20px, but they render at different total sizes.</p>
+  </header>
+
+  <main>
+    <section class="comparison-row">
+
+      <div class="box content-box">
+        <h2>box-sizing: content-box</h2>
+        <p>Width is 250px, but the 20px padding and 4px border are added on top. The box actually renders at 298px wide.</p>
+      </div>
+
+      <div class="box border-box">
+        <h2>box-sizing: border-box</h2>
+        <p>Width is still 250px, but padding and border are now included inside that 250px, so the box renders exactly 250px wide.</p>
+      </div>
+
+    </section>
+
+    <section class="explanation">
+      <h2>Why it matters</h2>
+      <p>
+        With the default <code>content-box</code>, the <code>width</code> property only sets the size of the
+        content area. Padding and border are added afterward, making the element larger than the width you
+        specified. With <code>border-box</code>, the browser subtracts padding and border from the width you
+        set, so the element's final rendered size always matches the number you typed. Most modern layouts
+        use <code>border-box</code> everywhere to make sizing predictable.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 8</p>
+  </footer>
+</body>
+</html>

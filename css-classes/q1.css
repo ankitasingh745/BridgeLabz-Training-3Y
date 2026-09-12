@@ -1,0 +1,128 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f6f7f9;
+  color: #22262b;
+  line-height: 1.5;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header {
+  background-color: #22303f;
+  color: #ffffff;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+/* ===== Flexbox row that holds every demo card ===== */
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.demo-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e5e9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.demo-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #22303f;
+}
+
+.demo-card p {
+  font-size: 0.85rem;
+  color: #5c636b;
+}
+
+/* ===== :hover example on a link ===== */
+.demo-link {
+  display: inline-block;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.demo-link:hover {
+  color: #ffffff;
+  background-color: #2563eb;
+}
+
+/* ===== :focus example on an input field ===== */
+.demo-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #c7ccd1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.demo-input:focus {
+  border-color: #16a34a;
+  background-color: #eafcf0;
+}
+
+/* ===== :active example on a button ===== */
+.demo-button {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #d97706;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.demo-button:active {
+  transform: scale(0.95);
+  background-color: #92400e;
+}
+
+/* ===== :nth-child() example on a list ===== */
+.demo-list {
+  list-style: none;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.demo-list li {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Every odd list item (1st, 3rd, 5th...) gets a tint */
+.demo-list li:nth-child(odd) {
+  background-color: #eef1f5;
+}

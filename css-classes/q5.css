@@ -1,0 +1,92 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f7f8fa;
+  color: #23272b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* ===== Flexbox row with consistent spacing ===== */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ===== Shared button base ===== */
+.btn {
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+/* ===== Primary ===== */
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+/* ===== Secondary ===== */
+.btn-secondary {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+/* ===== Outline ===== */
+.btn-outline {
+  background-color: transparent;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+.btn-outline:hover:not(:disabled) {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* ===== Disabled state ===== */
+.btn:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}

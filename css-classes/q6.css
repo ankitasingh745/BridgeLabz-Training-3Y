@@ -1,0 +1,93 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #101014;
+  color: #f1f1f1;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #9aa0a6;
+  font-size: 0.9rem;
+}
+
+main {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Centered horizontally and vertically with Flexbox ===== */
+.animation-stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.anim-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 140px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b9bec4;
+}
+
+/* ===== 1. Moving box: slides back and forth ===== */
+.moving-box {
+  width: 60px;
+  height: 60px;
+  background-color: #f97316;
+  border-radius: 8px;
+  animation: slide 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: translateX(-40px); }
+  to   { transform: translateX(40px); }
+}
+
+/* ===== 2. Bouncing ball: repeats, starts slightly delayed, runs forward then reverses ===== */
+.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  animation: bounce 1.2s ease-in-out infinite;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50px); }
+}
+
+/* ===== 3. Color-changing text: cycles through colors a fixed number of times ===== */
+.color-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: colorShift 3s ease-in-out infinite;
+  animation-iteration-count: 6;
+}
+
+@keyframes colorShift {
+  0%   { color: #f97316; }
+  33%  { color: #22c55e; }
+  66%  { color: #3b82f6; }
+  100% { color: #f97316; }
+}

@@ -1,0 +1,98 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #23272b;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #f0f2f4;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e5e9;
+}
+
+/* ===== 1. Element selector: targets every <p> on the page ===== */
+p {
+  color: #3a3f45;
+}
+
+/* ===== 2. Class selector: only elements with class="highlight" ===== */
+.highlight {
+  background-color: #fff3cd;
+  padding: 0.5rem;
+  border-left: 4px solid #d9a441;
+}
+
+/* ===== 3. ID selector: only the single element with this ID ===== */
+#unique-note {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* ===== 4. Attribute selectors ===== */
+a[href^="https"] {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 0.4rem;
+  border: 1px solid #c7ccd1;
+  border-radius: 4px;
+}
+
+/* ===== 5. Combinators ===== */
+
+/* Descendant combinator: any <p> anywhere inside .box */
+.box {
+  background-color: #f6f7f9;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.box p {
+  font-style: italic;
+}
+
+/* Child combinator: only <li> that are DIRECT children of .menu */
+.menu > li {
+  font-weight: 600;
+  list-style-type: square;
+}
+
+/* Adjacent sibling combinator: the <p> immediately after an <h4> */
+h4 + p {
+  color: #b45309;
+}
+
+/* General sibling combinator: every <p> that follows an <h4>, not just the first */
+h4 ~ p {
+  border-left: 3px solid #b45309;
+  padding-left: 0.6rem;
+}
+
+.combo-block {
+  margin-bottom: 1.5rem;
+}

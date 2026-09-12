@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini User Interface Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Profile Settings</h1>
+  </header>
+
+  <main class="page-main">
+    <section class="content-card">
+
+      <div class="avatar-row">
+        <div class="avatar"></div>
+        <div>
+          <h2>Update your details</h2>
+          <p>Changes are saved to your account immediately.</p>
+        </div>
+      </div>
+
+      <form class="profile-form">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Jordan Lee">
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jordan@example.com">
+
+        <label for="bio">Short bio</label>
+        <textarea id="bio" name="bio" rows="3" placeholder="Tell us a little about yourself"></textarea>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Assignment 8 &mdash; Question 10</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #14161a;
+  color: #f1f1f1;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #9aa0a6;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* ===== Grid layout for the gallery ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  margin: 0;
+  text-align: center;
+}
+
+/* The frame clips the scaled image so it doesn't overflow its rounded corners */
+.gallery-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+/* Six different gradients standing in for real photos */
+.img-1 { background: linear-gradient(135deg, #6b8f71, #2f4a34); }
+.img-2 { background: linear-gradient(180deg, #2b2450, #0d0b1f); }
+.img-3 { background: linear-gradient(135deg, #f2c14e, #d17b3a); }
+.img-4 { background: linear-gradient(180deg, #8fd3e8, #1c5f7a); }
+.img-5 { background: linear-gradient(180deg, #3f6b3a, #12240f); }
+.img-6 { background: linear-gradient(135deg, #0f2a4a, #3a9b6e, #0f2a4a); }
+
+/* Semi-transparent dark overlay, hidden until hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-frame:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-frame:hover .overlay {
+  opacity: 1;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #d5d8dc;
+}
+
+/* ===== Responsive: single column below 700px ===== */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

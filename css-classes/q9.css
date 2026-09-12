@@ -1,0 +1,76 @@
+/* ===== Base page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #23272b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 3rem 1.5rem;
+}
+
+/* ===== Distribute cards evenly across the page ===== */
+.effects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.fx-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 160px;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  /* Combine multiple animatable properties in one transition */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.fx-icon {
+  font-size: 1.8rem;
+  color: #6366f1;
+  transition: color 0.25s ease;
+}
+
+/* Each card grows slightly, deepens its shadow, and changes color on hover */
+.fx-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 22px rgba(99, 102, 241, 0.25);
+  background-color: #eef0ff;
+}
+
+.fx-card:hover .fx-icon {
+  color: #4338ca;
+}
+
+/* A slightly different transform on the second card for variety */
+.fx-card:nth-child(2):hover {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.fx-card:active {
+  transform: scale(0.97);
+}

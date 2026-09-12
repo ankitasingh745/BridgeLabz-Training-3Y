@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selector Types</h1>
+    <p>Each section below is styled using a different kind of selector.</p>
+  </header>
+
+  <main>
+
+    <section id="element-demo">
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled purely by its tag name: <code>p</code>.</p>
+      <p>So is this second paragraph &mdash; every &lt;p&gt; shares the rule.</p>
+    </section>
+
+    <section id="class-demo">
+      <h2>Class Selector</h2>
+      <p class="highlight">This paragraph has the class "highlight".</p>
+      <p>This one does not, so it keeps the default paragraph style.</p>
+    </section>
+
+    <section id="id-demo">
+      <h2>ID Selector</h2>
+      <p id="unique-note">This paragraph is targeted by its unique ID, "unique-note".</p>
+    </section>
+
+    <section id="attribute-demo">
+      <h2>Attribute Selector</h2>
+      <a href="https://example.com">External link (styled by [href])</a><br>
+      <input type="text" placeholder="Text input (styled by [type='text'])">
+    </section>
+
+    <section id="combinator-demo">
+      <h2>Combinators</h2>
+
+      <div class="combo-block">
+        <h3>Descendant combinator ( )</h3>
+        <div class="box">
+          <p>A paragraph nested inside .box is selected with <code>.box p</code>.</p>
+        </div>
+      </div>
+
+      <div class="combo-block">
+        <h3>Child combinator (&gt;)</h3>
+        <ul class="menu">
+          <li>Direct child item
+            <ul>
+              <li>Nested item (not selected by the child combinator)</li>
+            </ul>
+          </li>
+          <li>Direct child item</li>
+        </ul>
+      </div>
+
+      <div class="combo-block">
+        <h3>Adjacent sibling combinator (+)</h3>
+        <h4>Heading</h4>
+        <p>Only the paragraph immediately after the heading is styled.</p>
+        <p>This later paragraph is unaffected.</p>
+      </div>
+
+      <div class="combo-block">
+        <h3>General sibling combinator (~)</h3>
+        <h4>Heading</h4>
+        <p>Every paragraph after the heading gets styled, not just the first.</p>
+        <p>This one is styled too.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  
+</body>
+</html>
