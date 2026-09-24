@@ -1,0 +1,20 @@
+/* Override Bootstrap theme variables */
+:root {
+  --bs-primary: #2e7d5b;
+  --bs-primary-rgb: 46, 125, 91;
+  --bs-font-sans-serif: "Poppins", sans-serif;
+}
+body { font-family: var(--bs-font-sans-serif); background: #f4faf6; }
+
+/* Headings use a serif Google Font in the theme colour */
+h1, h2, h3, h4 { font-family: "Playfair Display", serif; color: var(--bs-primary); }
+
+/* Bootstrap 5.3 buttons use their own variables, so retheme them here */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary); --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #256548; --bs-btn-hover-border-color: #256548;
+  --bs-btn-active-bg: #1f563d; --bs-btn-active-border-color: #1f563d;
+}
+.card { border: 0; border-top: 4px solid var(--bs-primary); }
+.theme-header { background: #dff1e7; }
+.theme-footer { background: var(--bs-primary); }

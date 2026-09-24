@@ -1,0 +1,3 @@
+/* Hover: bigger shadow + slight lift, animated with a transition */
+.plan-card { transition: transform .3s ease, box-shadow .3s ease; }
+.plan-card:hover { transform: translateY(-8px); box-shadow: 0 1rem 3rem rgba(0,0,0,.25) !important; }

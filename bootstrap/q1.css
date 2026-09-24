@@ -1,0 +1,5 @@
+/* Hero background: gradient overlay on a photo */
+.hero {
+  background: linear-gradient(rgba(13,30,80,.75), rgba(13,30,80,.75)),
+              url("https://picsum.photos/id/1015/1600/700") center/cover no-repeat;
+}

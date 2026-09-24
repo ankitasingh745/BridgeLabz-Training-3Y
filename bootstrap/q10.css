@@ -1,0 +1,3 @@
+/* Keep slide images a consistent height and add a dark strip behind captions */
+.carousel-item img { height: 450px; object-fit: cover; }
+.carousel-caption { background: rgba(0,0,0,.45); border-radius: .5rem; }

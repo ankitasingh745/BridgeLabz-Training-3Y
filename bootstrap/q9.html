@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog – Pagination</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+  <header class="bg-dark text-white text-center py-4"><h1 class="h2 mb-0">The Daily Byte Blog</h1></header>
+
+  <main class="container py-5">
+    <article class="mb-4">
+      <h2 class="h4">10 CSS Tricks Every Beginner Should Know</h2>
+      <p class="text-muted">Sep 20, 2026</p>
+      <p>From flexbox shortcuts to custom properties, these small tricks save hours every week.</p>
+    </article>
+    <article class="mb-5">
+      <h2 class="h4">Why Bootstrap Still Matters</h2>
+      <p class="text-muted">Sep 14, 2026</p>
+      <p>A quick look at how a utility-rich framework speeds up prototypes and keeps layouts consistent.</p>
+    </article>
+
+    <!-- Pagination: justify-content-center centers the page links -->
+    <nav aria-label="Blog pages">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+
+    <!-- Simple pager: two outline buttons pushed to opposite ends -->
+    <div class="d-flex justify-content-between mt-4">
+      <a href="#" class="btn btn-outline-secondary">&larr; Older Posts</a>
+      <a href="#" class="btn btn-outline-secondary">Newer Posts &rarr;</a>
+    </div>
+  </main>
+</body>
+</html>
